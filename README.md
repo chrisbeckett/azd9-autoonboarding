@@ -12,9 +12,9 @@ To run this script, you will need the following:-
 2) An Azure AD **Application Registration** (see https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
 
 3) Azure environment information
-    a) Azure AD **tenant ID**
-    b) Azure **Application (Client) ID**
-    c) Azure **Application (Client) Secret Key**
+    - Azure AD **tenant ID**
+    - Azure **Application (Client) ID**
+    - Azure **Application (Client) Secret Key**
     
 4) Dome9 API key with admin permissions to add subscriptions
     a) Dome9 **API key
