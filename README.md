@@ -1,9 +1,10 @@
 What does this script do?
+-------------------------
 
 It logs into an Azure AD tenant, obtains a list of all subscriptions attached to it and then adds them one by one to Dome9 in read only mode. It can be used as an Azure Function to run daily to sweep up any new subscriptions not onboarded.
 
-PRE-REQUISITES
-=====
+Pre-requisites
+--------------
 To run this script, you will need the following:-
 
 1) You will need Python 3.6 (or newer)
