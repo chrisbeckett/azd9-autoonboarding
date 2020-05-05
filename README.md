@@ -24,11 +24,11 @@ Setup
 -----
 To run the script locally, you need to set several environment variables which are then read in by the script. This prevents any secret keys being hard coded into the script. Set the following:-
 
-SET D9_API_KEY=xxxxxxxxxxx
-SET D9_API_SECRET=xxxxxxxxxxxx
-SET AZURE_TENANT_ID=xxxxxxxxxx
-SET AZURE_CLIENT_ID=xxxxxxxxxxx
-SET AZURE_CLIENT_SECRET=xxxxxxxxxxxxxxx
+- SET D9_API_KEY=xxxxxxxxxxx
+- SET D9_API_SECRET=xxxxxxxxxxxx
+- SET AZURE_TENANT_ID=xxxxxxxxxx
+- SET AZURE_CLIENT_ID=xxxxxxxxxxx
+- SET AZURE_CLIENT_SECRET=xxxxxxxxxxxxxxx
 
 Running the script
 ------------------
