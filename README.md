@@ -32,4 +32,4 @@ SET AZURE_CLIENT_SECRET=xxxxxxxxxxxxxxx
 
 Running the script
 ------------------
-Simply run the script **onboard.py**
+Simply run the script **onboard1.py**
