@@ -32,4 +32,4 @@ To run the script locally, you need to set several environment variables which a
 
 Running the script
 ------------------
-Simply run the script **onboard1.py**
+Simply run the script **onboard.py**
