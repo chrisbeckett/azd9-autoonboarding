@@ -21,6 +21,8 @@ To run this script, you will need the following:-
     b) Dome9 **API secret
     
 5) You will need the **Azure Management Group** construct configured against your Azure AD (see *https://docs.microsoft.com/en-us/azure/governance/management-groups/* for further information). This is so that any new subscriptions added against the Azure AD tenant are visible to the onboarding tool. **Adding the Application ID as a Contributor in the IAM Access Control blade in the Tenant Root Group will provide this capability.**
+
+6) Run **pip install -r requirements.txt** to install required Python modules
     
 Setup
 -----
