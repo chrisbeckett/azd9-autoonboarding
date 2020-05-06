@@ -20,7 +20,7 @@ To run this script, you will need the following:-
     a) Dome9 **API key
     b) Dome9 **API secret
     
-5) You will need the Azure Management Group construct configured against your Azure AD. This is so that any new subscriptions added against the Azure AD tenant are visible to the onboarding tool. **Adding the Application ID as a Contributor in the IAM Access Control blade in the Tenant Root Group will provide this capability.
+5) You will need the Azure Management Group construct configured against your Azure AD. This is so that any new subscriptions added against the Azure AD tenant are visible to the onboarding tool. **Adding the Application ID as a Contributor in the IAM Access Control blade in the Tenant Root Group will provide this capability.**
     
 Setup
 -----
