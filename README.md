@@ -16,9 +16,9 @@ To run this script, you will need the following:-
     - Azure **Application (Client) ID**
     - Azure **Application (Client) Secret Key**
     
-4) Dome9 API key with admin permissions to add subscriptions
-    a) Dome9 **API key
-    b) Dome9 **API secret
+4) Dome9 API key with admin permissions to add subscriptions (*https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk144514&partition=General&product=CloudGuard*)
+    - Dome9 **API key
+    - Dome9 **API secret
     
 5) You will need the **Azure Management Group** construct configured against your Azure AD (see *https://docs.microsoft.com/en-us/azure/governance/management-groups/* for further information). This is so that any new subscriptions added against the Azure AD tenant are visible to the onboarding tool. **Adding the Application ID as a Contributor in the IAM Access Control blade in the Tenant Root Group will provide this capability.**
 
