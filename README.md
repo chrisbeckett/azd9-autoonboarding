@@ -7,7 +7,7 @@ Pre-requisites
 --------------
 To run this script, you will need the following:-
 
-1) You will need **Python 3.6** (or newer)
+1) **Python 3.6** (or newer)
 
 2) An Azure AD **Application Registration** (see *https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal*)
 
