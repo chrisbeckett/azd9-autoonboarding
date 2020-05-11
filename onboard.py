@@ -15,6 +15,41 @@ from msrestazure.azure_exceptions import CloudError
 from azure.common.credentials import ServicePrincipalCredentials
 from requests.auth import HTTPBasicAuth
 import json
+import sys
+
+# Verify the environment variables have been set
+
+def verify_env_variables():
+    try:
+        if 'D9_API_KEY' in os.environ:
+            pass
+        else:
+            print("ERROR : The Dome9 API key has not been defined in environment variables")
+            sys.exit(0)
+        if 'D9_API_SECRET' in os.environ:
+            pass
+        else:
+            print("ERROR : The Dome9 API key secret not been defined in environment variables")
+            sys.exit(0)
+        if 'AZURE_TENANT_ID' in os.environ:
+            pass
+        else:
+            print("ERROR : The Azure AD tenant ID has not been defined in environment variables")
+            sys.exit(0)
+        if 'AZURE_CLIENT_ID' in os.environ:
+            pass
+        else:
+            print("ERROR : The Azure AD application ID has not been defined in environment variables")
+            sys.exit(0)
+        if 'AZURE_CLIENT_SECRET' in os.environ:
+            pass
+        else:
+            print("ERROR : The Azure AD application secret key has not been defined in environment variables")
+            sys.exit(0)
+    except:
+        sys.exit(0)
+
+verify_env_variables()
 
 # Set Azure AD credentials from the environment variables
 credentials = ServicePrincipalCredentials(
