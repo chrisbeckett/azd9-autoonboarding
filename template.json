@@ -136,23 +136,23 @@
                             "value": "[reference(resourceId('microsoft.insights/components/', parameters('ApplicationInsightsName')), '2015-05-01').InstrumentationKey]"
                         },
                         {   "name": "AZURE_CLIENT_ID",
-                            "value": "[parameters(AzureApplicationID)]"
+                            "value": "[parameters('AzureApplicationID')]"
                         },
                         {
                             "name": "AZURE_CLIENT_SECRET",
-                            "value": "[parameters(AzureApplicationSecret)]"
+                            "value": "[parameters('AzureApplicationSecret')]"
                         },
                         {
                             "name": "AZURE_TENANT_ID",
-                            "value": "[parameters(AzureADTenantID)]"
+                            "value": "[parameters('AzureADTenantID')]"
                         },
                         {
                             "name": "D9_API_KEY",
-                            "value": "[parameters(Dome9APIKey)]"
+                            "value": "[parameters('Dome9APIKey')]"
                         },
                         {
                             "name": "D9_API_SECRET",
-                            "value": "[parameters(Dome9APISecret)]"
+                            "value": "[parameters('Dome9APISecret')]"
                         }
                     ]
                 }
