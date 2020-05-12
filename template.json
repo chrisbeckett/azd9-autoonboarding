@@ -78,7 +78,8 @@
         }
     },
     "variables": {
-        "sa-name": "[parameters('StorageAccountName')]"
+        "sa-name": "[parameters('StorageAccountName')]",
+        "storageAccountid": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccountName'))]" 
     },
     "resources": [
         {
