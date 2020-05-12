@@ -94,7 +94,7 @@
         },
         {
             "apiVersion": "2015-05-01",
-            "name": "[variables('ApplicationInsightsName')]",
+            "name": "[parameters('ApplicationInsightsName')]",
             "type": "Microsoft.Insights/components",
             "kind": "web",
             "location": "[resourceGroup().location]",
