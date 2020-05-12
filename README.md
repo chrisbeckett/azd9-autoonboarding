@@ -40,7 +40,7 @@ Running the script
 ------------------
 Simply run the script **onboard.py**
 
-Deploying as an Azure Function **(work in progress)**
+Deploying as an Azure Function **(BROKEN - work in progress)**
 -----------------------------------------------------
 
 - Click the "Deploy to Azure" button and fill out the deployment form
