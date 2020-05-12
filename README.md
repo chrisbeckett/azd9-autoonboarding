@@ -44,5 +44,7 @@ Deploying as an Azure Function **(work in progress)**
 -----------------------------------------------------
 
 - Click the "Deploy to Azure" button and fill out the deployment form
+- The Azure Function name and the Storage Account name **must be globally unique or deployment will fail**
+- Once the ARM template deployment is complete, connect Visual Studio Code (or another tool) and upload the Function code as per Microsoft documentation
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fazd9-autoonboarding%2Fmaster%2Ftemplate.json)
