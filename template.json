@@ -99,7 +99,7 @@
             "kind": "web",
             "location": "[resourceGroup().location]",
             "tags": {
-                "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionAppName'))]": "Resource"
+                "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('AzureFunctionName'))]": "Resource"
             },
             "properties": {
                 "Application_Type": "web",
