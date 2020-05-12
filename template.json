@@ -5,7 +5,7 @@
         "AzureFunctionName": {
             "type": "string",
             "metadata": {
-                "description": "Azure Function name."
+                "description": "Azure Function name - must be globally unique"
             }
         },
         "ApplicationInsightsName": {
@@ -18,7 +18,7 @@
             "type": "string",
             "maxLength": 24,
             "metadata": {
-                "description": "Storage account name (must be unique, max 24 characters)."
+                "description": "Storage account name (must be globally unique, max 24 characters)."
             }
         },
         "NewOrExistingStorageAccount": {
