@@ -40,4 +40,9 @@ Running the script
 ------------------
 Simply run the script **onboard.py**
 
+Deploying as an Azure Function **(work in progress)**
+-----------------------------------------------------
+
+- Click the "Deploy to Azure" button and fill out the deployment form
+
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fazd9-autoonboarding%2Fmaster%2Ftemplate.json)
