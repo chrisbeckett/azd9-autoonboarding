@@ -22,9 +22,13 @@ To run this script, you will need the following:-
     
 5) You will need the **Azure Management Group** construct configured against your Azure AD (see *https://docs.microsoft.com/en-us/azure/governance/management-groups/overview* for further information). This is so that any new subscriptions added against the Azure AD tenant are visible to the onboarding tool. **Adding the Application ID as a Contributor in the IAM Access Control blade in the Tenant Root Group will provide this capability.**
 
-6) Clone the repository locally
+6) Run **git clone https://github.com/chrisbeckett/azd9-autoonboarding.git**
 
-7) Run **pip install -r requirements.txt** to install required Python modules
+7) Run **python -m venv azd9-autoonboarding**
+
+8) Run **scripts\activate.bat** to enable the Python virtual environment
+
+9) Run **pip install -r requirements.txt** to install required Python modules
     
 Setup
 -----
@@ -38,13 +42,18 @@ To run the script locally, you need to set several environment variables which a
 
 Running the script
 ------------------
-Simply run the script **onboard.py**
+Simply run the script **onboard.py** from the command line 
 
 Deploying as an Azure Function **(work in progress)**
 -----------------------------------------------------
 
 - Click the "Deploy to Azure" button and fill out the deployment form
-- The **Azure Function** name and the **Storage Account** name **must be globally unique or deployment will fail (if a new storage account is created)**
-- Once the ARM template deployment is complete, connect Visual Studio Code (or another tool) and upload the Function code as per Microsoft documentation
-
+- Both the **Azure Function** name and the **Storage Account** name **must be globally unique or deployment will fail (if a new storage account is created)**
+- Once the ARM template deployment is complete, open a command prompt and navigate to the **azd9-autoonboarding** folder
+- Install the Azure Functions command line tools (*https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash*)
+- Run **func init**
+- Run **func azure functionapp publish <functname>** where the functname is your function name from the "Deploy to Azure" workflow
+- By default, the function uses a timer trigger set to run at 0600 daily, you may alter this to suit your needs
+    
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fazd9-autoonboarding%2Fmaster%2Ftemplate.json)
+
