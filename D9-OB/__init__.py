@@ -39,27 +39,27 @@ def verify_env_variables():
         if 'D9_API_KEY' in os.environ:
             pass
         else:
-            print("ERROR : The Dome9 API key has not been defined in environment variables")
+            logging.info("ERROR : The Dome9 API key has not been defined in environment variables")
             sys.exit(0)
         if 'D9_API_SECRET' in os.environ:
             pass
         else:
-            print("ERROR : The Dome9 API key secret not been defined in environment variables")
+            logging.info("ERROR : The Dome9 API key secret not been defined in environment variables")
             sys.exit(0)
         if 'AZURE_TENANT_ID' in os.environ:
             pass
         else:
-            print("ERROR : The Azure AD tenant ID has not been defined in environment variables")
+            logging.info("ERROR : The Azure AD tenant ID has not been defined in environment variables")
             sys.exit(0)
         if 'AZURE_CLIENT_ID' in os.environ:
             pass
         else:
-            print("ERROR : The Azure AD application ID has not been defined in environment variables")
+            logging.info("ERROR : The Azure AD application ID has not been defined in environment variables")
             sys.exit(0)
         if 'AZURE_CLIENT_SECRET' in os.environ:
             pass
         else:
-            print("ERROR : The Azure AD application secret key has not been defined in environment variables")
+            logging.info("ERROR : The Azure AD application secret key has not been defined in environment variables")
             sys.exit(0)
     except:
         sys.exit(0)
@@ -100,17 +100,17 @@ def list_subscriptions():
             payload = {'name':sub.display_name,'subscriptionId':sub.subscription_id,'tenantId':az_tenant,'credentials': {'clientId':az_appid,'clientPassword':az_appkey},'operationMode':d9_operation_mode,'vendor':'azure'}
             r = requests.post('https://api.dome9.com/v2/AzureCloudAccount', json=payload, headers=headers, auth=(d9_api_key,d9_api_secret))
             if r.status_code == 201:
-                print('Subscription successfully added to Dome9:',sub.subscription_id)
+                logging.info('Subscription successfully added to Dome9:',sub.subscription_id)
             elif r.status_code == 400:
-                print('There was an error with the subscription, please check credentials and that it does not already exist in Dome9')
+                logging.info('There was an error with the subscription, please check credentials and that it does not already exist in Dome9')
             elif r.status_code == 401:
-                print('Bad credentials onboarding subscription to Dome9:',sub.subscription_id)
+                logging.info('Bad credentials onboarding subscription to Dome9:',sub.subscription_id)
             else:
-                print('Unknown error onboarding subscription to Dome9:',sub.subscription_id,'Status Code:',r.status_code)
-            print(r.content)
+                logging.info('Unknown error onboarding subscription to Dome9:',sub.subscription_id,'Status Code:',r.status_code)
+            logging.info(r.content)
         msg="Operation complete"
         return msg 
     except CloudError as e:
-        print(e)
+        logging.info(e)
 
 list_subscriptions()
