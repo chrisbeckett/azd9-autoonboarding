@@ -156,7 +156,8 @@
                             "value": "[parameters('Dome9APISecret')]"
                         }
                     ]
-                }
+                },
+                "reserved": true
             }
         }
         
