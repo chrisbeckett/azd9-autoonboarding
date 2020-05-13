@@ -44,7 +44,7 @@ Running the script
 ------------------
 Simply run the script **onboard.py** from the command line 
 
-Deploying as an Azure Function **(work in progress)**
+Deploying as an Azure Function **(BETA)**
 -----------------------------------------------------
 
 - Click the "Deploy to Azure" button and fill out the deployment form
