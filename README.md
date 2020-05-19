@@ -52,7 +52,7 @@ Deploying as an Azure Function **(BETA)**
 - Once the ARM template deployment is complete, open a command prompt and navigate to the **azd9-autoonboarding** folder
 - Install the Azure Functions command line tools (*https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash*)
 - Run **func init**
-- Run **func azure functionapp publish <functname>** where the functname is your function name from the "Deploy to Azure" workflow
+- Run **func azure functionapp publish *functname*** where the functname is your function name from the "Deploy to Azure" workflow
 - By default, the function uses a timer trigger set to run at 0600 daily, you may alter this to suit your needs
     
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fazd9-autoonboarding%2Fmaster%2Ftemplate.json)
