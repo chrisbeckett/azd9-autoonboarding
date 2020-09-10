@@ -3,6 +3,11 @@ What does this script do?
 
 It logs into an Azure AD tenant, obtains a list of all subscriptions attached to it and then adds them one by one to Dome9 in read only mode. It can be used as an Azure Function to run daily to sweep up any new subscriptions not onboarded.
 
+Standalone Windows executable
+-----------------------------
+
+If you need to run the tool as a one off and don't want the faff of all the steps below, you can download the ZIP archive. This is a portable version of the tool for Windows only, all batteries included. Download and extract the ZIP and run **onboard.exe**. For a Linux or Mac version of this, please open an issue and I will address this. Remember to set environment variables prior to running the tool (see below).
+
 Pre-requisites
 --------------
 To run this script, you will need the following:-
