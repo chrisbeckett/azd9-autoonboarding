@@ -3,6 +3,9 @@ What does this script do?
 
 It logs into an Azure AD tenant, obtains a list of all subscriptions attached to it and then adds them one by one to Dome9 in read only mode. It can be used as an Azure Function to run daily to sweep up any new subscriptions not onboarded.
 
+![alt text](https://github.com/chrisbeckett/azd9-autoonboarding/blob/master/onboard.png "Onboarder screenshot")
+
+
 Standalone Windows executable
 -----------------------------
 
