@@ -9,7 +9,7 @@ azure-nspkg==3.0.2
 certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
-cryptography==2.9.2
+cryptography==3.2
 idna==2.9
 isodate==0.6.0
 msal==1.2.0
