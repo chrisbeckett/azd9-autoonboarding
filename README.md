@@ -12,6 +12,7 @@ What's New? (6th January 2021)
    - Changed references from Dome9 to CloudGuard 
    - Changed environment variables from **D9_API_KEY** and **D9_API_SECRET** to **CG_API_KEY** and **CG_API_SECRET** respectively
    - Updated code to leverage current authentication library from Azure, removing deprecated method
+   - Improved logging in Azure Function code
 
 
 Standalone Windows executable
