@@ -5,6 +5,14 @@ It logs into an Azure AD tenant, obtains a list of all subscriptions attached to
 
 ![alt text](https://github.com/chrisbeckett/azd9-autoonboarding/blob/master/onboard.png "Onboarder screenshot")
 
+What's New? (6th January 2021)
+------------------------------
+
+   - Updated core libraries to latest version, resolving security issue in cryptography library
+   - Changed references from Dome9 to CloudGuard 
+   - Changed environment variables from D9_API_KEY and D9_API_SECRET to CG_API_KEY and CG_API SECRET respectively
+   - Updated code to leverage current authentication library from Azure, removing deprecated method
+
 
 Standalone Windows executable
 -----------------------------
