@@ -39,16 +39,16 @@
                 "description": "Storage Account type"
             }
         },
-        "Dome9APIKey": {
+        "CloudGuardAPIKey": {
             "type": "string",
             "metadata": {
-                "description": "Dome9 API key value."
+                "description": "CloudGuard API key value."
             }
         },
-        "Dome9APISecret": {
+        "CloudGuardAPISecret": {
             "type": "securestring",
             "metadata": {
-                "description": "Dome9 API key secret value."
+                "description": "CloudGuard API key secret value."
             }
         },
         "AzureApplicationID": {
@@ -148,12 +148,12 @@
                             "value": "[parameters('AzureADTenantID')]"
                         },
                         {
-                            "name": "D9_API_KEY",
-                            "value": "[parameters('Dome9APIKey')]"
+                            "name": "CG_API_KEY",
+                            "value": "[parameters('CloudGuardAPIKey')]"
                         },
                         {
-                            "name": "D9_API_SECRET",
-                            "value": "[parameters('Dome9APISecret')]"
+                            "name": "CG_API_SECRET",
+                            "value": "[parameters('CloudGuardAPISecret')]"
                         }
                     ]
                 },
