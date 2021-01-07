@@ -13,12 +13,16 @@ What's New? (6th January 2021)
    - Changed environment variables from **D9_API_KEY** and **D9_API_SECRET** to **CG_API_KEY** and **CG_API_SECRET** respectively
    - Updated code to leverage current authentication library from Azure, removing deprecated method
    - Improved logging in Azure Function code
+   - Updated standalone Windows executable
+   - New MacOS standalone executable
 
 
-Standalone Windows executable
+Standalone executable
 -----------------------------
 
-If you need to run the tool as a one off and don't want the faff of all the steps below, you can download the ZIP archive. This is a portable version of the tool for Windows only, all batteries included. Download and extract the ZIP and run **onboard.exe**. For a Linux or Mac version of this, please open an issue and I will address this. Remember to set environment variables prior to running the tool (see below).
+If you need to run the tool as a one off and don't want the faff of all the steps below, you can download the ZIP archive. This is a portable version of the tool for Windows or Mac, all batteries included. Download and extract the ZIP and run the executable.
+
+Remember to set environment variables prior to running the tool (see below).
 
 Pre-requisites
 --------------
