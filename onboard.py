@@ -1,9 +1,17 @@
 # This script logs into Azure AD and iterates through subscriptions to onboard them into CloudGuard
-# Feedback to chrisbe@checkpoint.com or open an issue on https://github.com/chrisbeckett/azd9-autoonboarding/issues
+# Feedback to stuartg@checkpoint.com or open an issue on https://github.com/chkp-stuartgreen/azd9-autoonboarding/issues
 
 # To run the script, you will need to set environment variables for AZURE_CLIENT_ID, AZURE_CLIENT_SECRET and AZURE_TENANT_ID
 
-# You will also need to set environment variables for CG_API_KEY and CG_API_SECRET
+
+
+# You will also need to set environment variables for CG_API_KEY, CG_API_SECRET and CG_REGION
+# Regions:
+# 
+# USA = default / blank (secure.dome9.com)
+# Australia = AP2 (secure.ap2.dome9.com)
+# Ireland = EU1 (secure.eu1.dome9.com)
+# India = AP3 secure.ap3.dome9.com
 
 # Import required libraries
 import os
@@ -44,6 +52,10 @@ def verify_env_variables():
         else:
             print("ERROR : The Azure AD application secret key has not been defined in environment variables")
             sys.exit(0)
+        if 'CG_REGION' in os.environ and os.environ['CG_REGION'] in ['AP2', 'AP3', 'EU1']:
+            cloudguard_endpoint_host = f"api.{os.environ['CG_REGION'].lower()}.dome9.com"
+        else:
+            cloudguard_endpoint_host = 'api.dome9.com'
     except:
         sys.exit(0)
 
@@ -81,7 +93,7 @@ def list_subscriptions():
         for sub in sub_client.subscriptions.list():
             print('Subscription found:', sub.subscription_id, sub.display_name)
             payload = {'name':sub.display_name,'subscriptionId':sub.subscription_id,'tenantId':az_tenant,'credentials': {'clientId':az_appid,'clientPassword':az_appkey},'operationMode':cg_operation_mode,'vendor':'azure'}
-            r = requests.post('https://api.dome9.com/v2/AzureCloudAccount', json=payload, headers=headers, auth=(cg_api_key,cg_api_secret))
+            r = requests.post(f"https://{cloudguard_endpoint_host}/v2/AzureCloudAccount", json=payload, headers=headers, auth=(cg_api_key,cg_api_secret))
             if r.status_code == 201:
                 print('Subscription successfully added to CloudGuard:',sub.subscription_id)
             elif r.status_code == 400:
