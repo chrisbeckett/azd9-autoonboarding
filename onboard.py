@@ -52,10 +52,6 @@ def verify_env_variables():
         else:
             print("ERROR : The Azure AD application secret key has not been defined in environment variables")
             sys.exit(0)
-        if 'CG_REGION' in os.environ and os.environ['CG_REGION'] in ['AP2', 'AP3', 'EU1']:
-            cloudguard_endpoint_host = f"api.{os.environ['CG_REGION'].lower()}.dome9.com"
-        else:
-            cloudguard_endpoint_host = 'api.dome9.com'
     except:
         sys.exit(0)
 
@@ -77,6 +73,11 @@ cg_api_secret = os.environ['CG_API_SECRET']
 az_tenant=os.environ['AZURE_TENANT_ID']
 az_appid=os.environ['AZURE_CLIENT_ID']
 az_appkey=os.environ['AZURE_CLIENT_SECRET']
+
+if 'CG_REGION' in os.environ and os.environ['CG_REGION'] in ['AP2', 'AP3', 'EU1']:
+    cloudguard_endpoint_host = f"api.{os.environ['CG_REGION'].lower()}.dome9.com"
+else:
+    cloudguard_endpoint_host = 'api.dome9.com'
 
 # Set header parameters for CloudGuard HTTP POST
 headers = {
